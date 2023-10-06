@@ -1,0 +1,24 @@
+{% extends "index.html" %} {% block content %}
+{% csrf_token %}
+<body bgcolor="black">
+<center>
+    <img style="margin-top: 70px;" src="https://t3.ftcdn.net/jpg/03/67/35/72/360_F_367357209_BG07SVnnB4HSHSaMiHajfZhrZZAE859A.jpg" alt="Welcome">
+    
+    <div class="the_job">
+        <ul type="square" id="title_of_show"><u>Your jobs List</u> </ul>
+        {% for i in my_job %}
+        <li id="jobs_show">{{i}}</li>
+        {% endfor %}
+    </div>
+
+    <div class="the_job">
+        <ul type="square" id="title_of_show"><u>Job Applied Users List :- </u> </ul>
+        {% for i in applay_job %}
+        <li id="jobs_show">{{i.candidate}} is applied for {{i.Job}} Job.</li>
+        {% endfor %}
+    </div>
+
+</center>  
+</body>
+</html>
+{% endblock %}

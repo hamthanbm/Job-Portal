@@ -1,0 +1,46 @@
+{% extends "index.html" %} {% block content %} {% if user.is_authenticated %}
+<form  method="post" autocomplete="off">
+  {% csrf_token %}
+  <h1 style="font-size: large;color: rgb(253, 254, 254);float: right;margin: 30px;">
+    Welcome : {{user.username}}
+  </h1>
+  <h1>...</h1>
+     <input style="display: none;" type="checkbox" name="current" value="{{user.username}}"/>
+    <div class="container" id="e">
+        <div style="float: right;margin-top: 35px;"><a id="setting" style="color: beige;font-size: x-larger;" href="{% url 'Access' %}" target="_blank" class="navbar-brand"><i class="fa fa-yin-yang"> Show </i></a> 
+        </div> 
+      <center>
+        <div class="title"><h3>Choose jobs</h3></div>
+      </center>
+      <table class="table table-responsive" style="margin-top: 50px;">
+        <thead>
+          <tr>
+            <th scope="col" style="color: whitesmoke;font-size: large;"><center>Job Title</center></th>
+            <th scope="col" style="color: whitesmoke;font-size: large;"><center>Company</center></th>
+            <th scope="col" style="color: whitesmoke;font-size: large;"><center>Salary</center></th>
+            <th scope="col" style="color: whitesmoke;font-size: large;"><center>Contact</center></th>
+            <th scope="col" style="color: whitesmoke;font-size: large;"><center>Applay</center></th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for i in j %}
+
+          <tr id="hov">
+            <th scope="col"><center>{{i.position}}</center></th>
+            <th scope="col"><center>{{i.company}}</center></th>
+            <th scope="col"><center>{{i.salary}}</center></th>
+            <th scope="col"><center>{{i.mail}}</center></th>
+            <th scope="col"><center><input type="checkbox" name="okay" value="{{i}}"  id="check"></center></th>
+          </tr>
+
+        {% endfor %}
+          </tbody>
+        </table> 
+        <center>
+      <div class="btn btn-dark applay" style="background-color: black;"> <input style="background-color: black;" onclick="a()" id="uo" type="Submit" value="Applay Checked Jobs"/> </div>
+    </center></div>
+
+  </form>
+    {% else %}
+    <center><h3 style="margin-top: 400px;">- - - - - Welcome to JobPortel - - - - -</h3></center>
+    {% endif %} {% endblock %}

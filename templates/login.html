@@ -1,0 +1,30 @@
+{% extends "index.html" %}      
+{% block content %}		
+{% load crispy_forms_tags %}
+<div class="container-fluid" style="margin-top:100px;">
+	<div class="col-md-offset-4 col-md-4" >
+		<h2 class="text-primary page-header text-center">User Login</h2>
+	</div>	
+	<div class="col-md-offset-4 col-md-4 well">		
+		{% if messages %}
+					{% for message in messages %}
+						<div class="alert alert-{{ message.tags }}">
+							{{ message }} 
+						</div>
+					{% endfor %}
+			{% endif %}	
+		<form method="POST" autocomplete="off">		
+			{% csrf_token %}	<center>			
+			<div class="form">
+				<input type="text" name="username" placeholder="Enter Your UserName Here"/>
+				<br/>
+				<input type="password" name="password" placeholder="Enter Your PassCode Here"/>
+			</div>
+			<button type="submit" class="btn btn-primary">Login</button>					
+		</form>	
+		<div> <br/>
+			<a href="{% url 'Register'%}">Sign Up Now</a>
+		</div></center>
+	</div>		
+</div>	
+{% endblock %}	

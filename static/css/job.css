@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgba(6, 0, 0, 1);
+  color: whitesmoke;
+  width: 100%;
+  height: 100vh;
+}
+
+#e {
+  margin-top: 50px;
+  background-color: rgba(28, 25, 25,1);
+  font-weight: bold;
+  /* transition-property: width,text-shadow; */
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+  border-radius: 15px;
+}
+
+#e:hover {
+  border-radius: 20px;
+  background-color: rgba(28, 25, 25,0.7);
+  box-shadow: 0 0 6px whitesmoke;
+}
+
+#h3 {
+  color: rgb(223, 69, 69);
+  width: max-content;
+  display: inline;
+  margin-left: 10px;
+}
+
+.title {
+  margin-top: 30px;
+  background-color: rgb(98, 74, 74);
+  color: rgb(21, 175, 175);
+  width: 100%;
+  border-radius: 10px;
+  padding: 2px;
+  text-align: center;
+}
+
+.job {
+  border-radius: 15px;
+  margin: 30px;
+  width: 90%;
+  background-color: rgb(22, 21, 21);
+}
+
+#check {
+  width: 30px;
+  height: 30px;
+}
+
+.applay {
+  margin: 30px;
+  font-size: larger;
+  border-radius: 25px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.applay:hover {
+  box-shadow: 0 0 10px whitesmoke;
+  color: yellow;
+}
+
+td {
+  font-weight: bolder;
+}
+
+#uo{
+  background-color: inherit;
+  font-size: x-large;
+  color: white;
+}
+
+#hov{
+  color: rgba(230, 223, 223, 0.642);
+}
+
+#hov:hover{
+  background-color: rgba(100, 148, 237, 0.418);
+}
+
+#setting:hover{
+  background-color: rgb(152, 81, 81);
+  border-radius: 30px;
+}
+
+#title_of_show{
+  color: whitesmoke;
+  font-size: x-large;
+  text-align: left;
+  font-weight: bolder;
+}
+
+#jobs_show{
+  color: rgba(255, 255, 255, 0.626);
+  font-size: large;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.the_job{
+  width: 40%;
+  border-radius: 15px;
+  border: 1px solid darkred;
+  height: fit-content;
+  padding: 30px;
+  margin: 30px;
+  background-color: darkslategrey;
+}
+
+.the_job:hover{
+  border: 20px;
+  box-shadow: 0 0 0 5px whitesmoke;
+}
+
+.form input{
+  width: 90%;
+  border-radius: 10px;
+  font-size: large;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: darkblue;
+  text-align: center;
+}
+
+form button{
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 2px;
+  font-size: medium !important;
+  border-radius: 10px;
+  width: 80%;
+}
